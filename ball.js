@@ -1,9 +1,16 @@
 const ball = document.createElement('div');
 document.body.appendChild(ball);
 
+let modulo = 60;
+let counter = 0;
+
 function moveBall() {
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
+    counter++;
+    if (counter % modulo === 0)
+    {
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+    }
     ball.style.left = `${x}px`;
     ball.style.top = `${y}px`;
     ball.style.position = `absolute`;
